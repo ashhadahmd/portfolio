@@ -265,10 +265,10 @@ export function Overview() {
 
       <section
         id="experience"
-        aria-label="Experience and education"
+        aria-label="Experience"
         className="bg-transparent pb-16 md:pb-24 lg:pb-28 2xl:pb-32"
       >
-        <div className="container-apple flex flex-col gap-14">
+        <div className="container-apple">
           <Timeline title="Experience">
             {experience.map((job, index) => (
               <Reveal key={job.company} as="li" delay={index * 0.08} className="py-6">
@@ -279,18 +279,6 @@ export function Overview() {
                   <TimelineRow key={role.title} label={role.title} dates={role.dates} />
                 ))}
                 {job.summary && <p className="type-body measure mt-3">{job.summary}</p>}
-              </Reveal>
-            ))}
-          </Timeline>
-
-          <Timeline title="Education">
-            {education.map((item, index) => (
-              <Reveal key={item.school} as="li" delay={index * 0.08} className="py-6">
-                <p className="text-[17px] font-semibold tracking-[-0.022em] text-primary">
-                  {item.school}
-                </p>
-                <TimelineRow label={item.degree} dates={item.dates} />
-                {item.activity && <p className="type-body measure mt-3">{item.activity}</p>}
               </Reveal>
             ))}
           </Timeline>
@@ -327,6 +315,21 @@ export function Overview() {
           </div>
         </section>
       )}
+
+      <section id="education" aria-label="Education" className="bg-transparent pt-16 md:pt-24">
+        <div className="container-apple">
+          <Timeline title="Education">
+            {education.map((item, index) => (
+              <Reveal key={item.school} as="li" delay={index * 0.08} className="py-6">
+                <p className="text-[17px] font-semibold tracking-[-0.022em] text-primary">
+                  {item.school}
+                </p>
+                <TimelineRow label={item.degree} dates={item.dates} />
+              </Reveal>
+            ))}
+          </Timeline>
+        </div>
+      </section>
 
       <section
         id="contact"

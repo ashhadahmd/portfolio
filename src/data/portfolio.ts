@@ -116,12 +116,19 @@ export const portfolioData = {
         'Backend for Rupin (formerly Udhaar Book) and the Cobu payment gateway: wallet and ledger services, QR and DQR payments, IBAN and VIBAN payments, and the MPGS integration.',
     },
     {
+      company: 'Google Developer Groups on Campus, SSUET',
+      roles: [{ title: 'Digital Operations Team Lead', dates: 'Oct 2024 – Oct 2025' }],
+      summary:
+        'Ran operations for 15+ technical events with 2,000+ attendees and a team of 50+ volunteers.',
+    },
+    {
       company: 'Tesseract Corp (Pvt) Ltd',
       roles: [
         { title: 'Python and 3D Developer', dates: 'May 2024 – May 2025' },
         { title: '3D Developer', dates: 'Jan 2024 – May 2024' },
       ],
-      summary: '',
+      summary:
+        '3D design tools in Three.js and React Three Fiber, including room, bathroom, and container designers, then Python REST APIs and ML models, including a virtual try-on model and a dental model.',
     },
   ],
 
@@ -130,14 +137,11 @@ export const portfolioData = {
       school: 'Sir Syed University of Engineering & Technology',
       degree: 'Bachelor of Science, Computer Science',
       dates: 'Oct 2023 – Oct 2027 (expected)',
-      activity:
-        'Digital Operations Team Lead, Google Developer Student Clubs (2024 – 2025). Ran operations for 15+ technical events with 2,000+ attendees and a team of 50+ volunteers.',
     },
     {
       school: 'Sir Adamjee Institute',
       degree: 'Intermediate',
       dates: 'Nov 2021 – Jun 2023',
-      activity: '',
     },
   ],
 
@@ -145,7 +149,7 @@ export const portfolioData = {
     { group: 'Languages', items: ['Python', 'JavaScript', 'SQL', 'Bash', 'C++'] },
     {
       group: 'Backend & APIs',
-      items: ['Django', 'FastAPI', 'Celery', 'Pydantic', 'REST APIs', 'WebSockets'],
+      items: ['Django', 'FastAPI', 'Flask', 'Celery', 'Pydantic', 'REST APIs', 'WebSockets'],
     },
     {
       group: 'Payments & Security',
@@ -153,13 +157,13 @@ export const portfolioData = {
     },
     {
       group: 'Data & Automation',
-      items: ['PostgreSQL', 'Redis', 'MongoDB', 'Vector Search', 'Pandas', 'NumPy', 'Scrapy', 'Playwright', 'Selenium'],
+      items: ['PostgreSQL', 'Redis', 'MongoDB', 'Vector Search', 'Pandas', 'NumPy', 'Machine learning', 'Computer vision', 'Scrapy', 'Playwright', 'Selenium'],
     },
     {
       group: 'Cloud & DevOps',
       items: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'ELK Stack', 'Sentry'],
     },
-    { group: 'Graphics', items: ['WebGL', 'Three.js'] },
+    { group: 'Graphics', items: ['Three.js', 'React Three Fiber', 'WebGL', 'Blender', 'Spline'] },
   ],
 };
 
