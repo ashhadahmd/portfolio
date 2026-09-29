@@ -151,12 +151,12 @@ export function Overview() {
             </p>
           </Reveal>
 
-          <h1 className="type-display mx-auto mb-10 max-w-[14ch] sm:mb-6">
+          <h1 className="type-display mx-auto mb-10 max-w-[16ch] sm:mb-6">
             <MaskedLines immediate delay={0.1} lines={[hero.headline, hero.headlineSecond]} />
           </h1>
 
           <Reveal immediate delay={0.34} y={20} className="hidden sm:block">
-            <p className="type-intro mx-auto mb-8 max-w-[44ch]">{hero.description}</p>
+            <p className="type-intro mx-auto mb-8 max-w-[48ch]">{hero.description}</p>
           </Reveal>
 
           <Reveal immediate delay={0.42} y={16}>

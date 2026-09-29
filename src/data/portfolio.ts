@@ -1,14 +1,16 @@
 import { asset } from '@/src/lib/utils';
 
 const email = 'ashhad.ahmed776@gmail.com';
+const role = 'Fintech Software Engineer';
+const company = 'Toko Labs';
 
 export const portfolioData = {
   profile: {
     name: 'Ashhad Ahmed',
-    role: 'Backend & Data Automation Engineer',
+    role,
+    company,
     email,
     location: 'Karachi, Pakistan',
-    currentStatus: 'Engineering financial infrastructure and data pipelines at Toko Labs',
     // Put the PDF in /public, then set this to asset('ashhad-ahmed-resume.pdf').
     resumeUrl: '',
     avatar: asset('avatar.jpg'),
@@ -18,15 +20,15 @@ export const portfolioData = {
       linkedin: 'https://linkedin.com/in/ashhad-ahmed',
     },
 
-    coreStack: ['Python', 'Backend Systems', 'Data Engineering', 'Automation'],
+    coreStack: ['Python', 'Payment Systems', 'Ledgers', 'Automation'],
   },
 
   hero: {
-    subhead: 'Backend Engineer · Toko Labs',
-    headline: 'Services that scale.',
-    headlineSecond: 'Automations that stick.',
+    subhead: `${role} · ${company}`,
+    headline: 'Financial engines.',
+    headlineSecond: 'Built to never fail.',
     description:
-      'High-throughput Python backends, end-to-end automation systems, and data pipelines built for extreme reliability.',
+      'I build Python backends, certified payment gateways, and automated systems that move money for millions of users.',
     primaryCta: { label: 'See the work', href: '#work' },
     secondaryCta: { label: 'Email me', href: `mailto:${email}` },
   },

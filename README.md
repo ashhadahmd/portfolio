@@ -1,16 +1,16 @@
 <p align="center">
-  <img src="public/og-image.png" alt="Ashhad Ahmed — Services that scale. Automations that stick." width="100%" />
+  <img src="public/og-image.png" alt="Ashhad Ahmed — Financial engines. Built to never fail." width="100%" />
 </p>
 
 <p align="center">
-  <a href="https://ashhadahmd.github.io/portfolio/"><strong>Live site</strong></a> ·
+  <a href="https://ashhadahmd.com"><strong>ashhadahmd.com</strong></a> ·
   <a href="https://linkedin.com/in/ashhad-ahmed">LinkedIn</a> ·
   <a href="mailto:ashhad.ahmed776@gmail.com">Email</a>
 </p>
 
 # Ashhad Ahmed — Portfolio
 
-Personal site of Ashhad Ahmed, a backend engineer at Toko Labs building Python services for payments, wallets, and data pipelines. It has case studies, the tech stack, and a contact page.
+Personal site of Ashhad Ahmed, a fintech software engineer at Toko Labs building Python backends for payments, wallets, and automated systems. It has case studies, the tech stack, and a contact page.
 
 ## Featured work
 

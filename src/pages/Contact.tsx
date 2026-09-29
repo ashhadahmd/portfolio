@@ -36,10 +36,8 @@ export function Contact() {
                   <h2 className="text-[17px] font-semibold tracking-[-0.016em] text-primary">
                     {profile.name}
                   </h2>
-                  <p className="type-caption">
-                    {profile.role}
-                    {profile.currentStatus ? ` · ${profile.currentStatus}` : ''}
-                  </p>
+                  <p className="type-caption">{profile.role}</p>
+                  <p className="type-caption">{profile.company}</p>
                 </div>
               </div>
             )}

@@ -4,7 +4,7 @@ import { MainLayout } from './components/layout/MainLayout';
 import { Overview } from './pages/Overview';
 import { Contact } from './pages/Contact';
 
-const DEFAULT_TITLE = 'Ashhad Ahmed | Backend Engineer';
+const DEFAULT_TITLE = 'Ashhad Ahmed | Fintech Software Engineer';
 
 const titles: Record<string, string> = {
   '/contact': 'Contact | Ashhad Ahmed',
