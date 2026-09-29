@@ -57,7 +57,7 @@ export const portfolioData = {
       slug: 'cobu-payment-gateway',
       title: 'Cobu — Certified Payment Gateway & Compliance',
       summary:
-        'Engineered backend transaction settlement, integrated Mastercard Payment Gateway Services (MPGS), and isolated cardholder data behind a Visa and Mastercard certified payment gateway under strict PCI-DSS SAQ-D mandates.',
+        "I built Cobu's backend transaction settlement and its Mastercard Payment Gateway Services (MPGS) integration, and kept cardholder data isolated from the rest of the platform.",
       impactHeadline: 'Certified by Visa and Mastercard',
       problem:
         'Cardholder data touched services that were never scoped to hold it, pulling the entire application estate into the PCI-DSS audit boundary.',
@@ -68,7 +68,7 @@ export const portfolioData = {
         'MPGS integration delivered for card payments',
         'PCI-DSS SAQ-D self-assessment successfully completed',
       ],
-      stack: ['Django', 'PostgreSQL', 'Redis', 'Celery', 'Docker', 'Sentry', 'MPGS', 'PCI-DSS'],
+      stack: ['Django', 'PostgreSQL', 'Redis', 'Celery', 'Docker', 'Sentry', 'MPGS'],
       confidential: true,
       cover: {
         art: asset('covers/cobu-devices.webp'),
@@ -108,20 +108,36 @@ export const portfolioData = {
     },
   ],
 
-  certifications: [
+  experience: [
     {
-      name: 'PCI-DSS SAQ-D Compliance Implementer & Auditor',
-      issuer: 'Toko Labs — Cobu',
-      year: '2025',
-      detail:
-        'Scoped the cardholder data environment, implemented rigorous encryption standards, and carried the SAQ-D self-assessment through end to end.',
+      company: 'Toko Labs',
+      roles: [{ title: 'Python Developer', dates: 'May 2025 – Present' }],
+      summary:
+        'Backend for Rupin (formerly Udhaar Book) and the Cobu payment gateway: wallet and ledger services, QR and DQR payments, IBAN and VIBAN payments, and the MPGS integration.',
     },
     {
-      name: 'Digital Operations Team Lead',
-      issuer: 'Google Developer Student Clubs (GDSC SSUET)',
-      year: '2024 – 2025',
-      detail:
-        'Orchestrated 15+ technical summits for 2,000+ participants and directed a 50+ member volunteer workforce using Agile/Kanban workflows.',
+      company: 'Tesseract Corp (Pvt) Ltd',
+      roles: [
+        { title: 'Python and 3D Developer', dates: 'May 2024 – May 2025' },
+        { title: '3D Developer', dates: 'Jan 2024 – May 2024' },
+      ],
+      summary: '',
+    },
+  ],
+
+  education: [
+    {
+      school: 'Sir Syed University of Engineering & Technology',
+      degree: 'Bachelor of Science, Computer Science',
+      dates: 'Oct 2023 – Oct 2027 (expected)',
+      activity:
+        'Digital Operations Team Lead, Google Developer Student Clubs (2024 – 2025). Ran operations for 15+ technical events with 2,000+ attendees and a team of 50+ volunteers.',
+    },
+    {
+      school: 'Sir Adamjee Institute',
+      degree: 'Intermediate',
+      dates: 'Nov 2021 – Jun 2023',
+      activity: '',
     },
   ],
 
@@ -129,20 +145,21 @@ export const portfolioData = {
     { group: 'Languages', items: ['Python', 'JavaScript', 'SQL', 'Bash', 'C++'] },
     {
       group: 'Backend & APIs',
-      items: ['Django', 'FastAPI', 'REST APIs', 'WebSockets', 'Celery', 'Pydantic'],
+      items: ['Django', 'FastAPI', 'Celery', 'Pydantic', 'REST APIs', 'WebSockets'],
     },
     {
-      group: 'Automation & Scraping',
-      items: ['Scrapy', 'Playwright', 'Selenium', 'Headless Browsers', 'Data Ingestion'],
+      group: 'Payments & Security',
+      items: ['MPGS', 'Wallets & ledgers', 'QR & DQR payments', 'IBAN & VIBAN', 'Tokenization', 'Idempotency keys'],
     },
     {
-      group: 'Data Science & Storage',
-      items: ['PostgreSQL', 'MongoDB', 'Redis', 'Pandas', 'NumPy', 'Matplotlib', 'Vector Search'],
+      group: 'Data & Automation',
+      items: ['PostgreSQL', 'Redis', 'MongoDB', 'Vector Search', 'Pandas', 'NumPy', 'Scrapy', 'Playwright', 'Selenium'],
     },
     {
-      group: 'Infrastructure & Graphics',
-      items: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'WebGL', 'Three.js'],
+      group: 'Cloud & DevOps',
+      items: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'ELK Stack', 'Sentry'],
     },
+    { group: 'Graphics', items: ['WebGL', 'Three.js'] },
   ],
 };
 

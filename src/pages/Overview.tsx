@@ -18,6 +18,28 @@ function StoryBeat({ label, children }: { label: string; children: React.ReactNo
   );
 }
 
+function Timeline({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <Reveal>
+        <p className="type-caption mb-8 text-center">{title}</p>
+      </Reveal>
+      <ul className="card-apple-sm mx-auto max-w-[680px] divide-y divide-outline-variant px-6 md:px-10">
+        {children}
+      </ul>
+    </div>
+  );
+}
+
+function TimelineRow({ label, dates }: { label: string; dates: string }) {
+  return (
+    <p className="type-caption mt-1 flex flex-wrap items-baseline justify-between gap-x-4">
+      <span className="text-on-surface-variant">{label}</span>
+      <span>{dates}</span>
+    </p>
+  );
+}
+
 const socialButtonClass =
   'flex h-11 w-11 items-center justify-center rounded-full bg-surface-low text-primary transition-colors hover:bg-surface-high';
 
@@ -116,13 +138,12 @@ function CaseStudyCard({ study }: { study: CaseStudy }) {
 }
 
 export function Overview() {
-  const { profile, hero, proof, caseStudies, certifications, competencies } = portfolioData;
+  const { profile, hero, proof, caseStudies, experience, education, competencies } = portfolioData;
   const reduceMotion = useReducedMotion();
 
   const showProof = proof.metrics.length > 0 || proof.badges.length > 0;
 
   const showWork = caseStudies.length > 0;
-  const showCredentials = certifications.length > 0;
   const showStack = competencies.length > 0;
 
   const heroRef = useRef<HTMLElement>(null);
@@ -242,36 +263,39 @@ export function Overview() {
         </section>
       )}
 
-      {showCredentials && (
-        <section
-          id="credentials"
-          aria-label="Certifications and compliance"
-          className="bg-transparent pb-16 md:pb-24 lg:pb-28 2xl:pb-32"
-        >
-          <div className="container-apple">
-            <Reveal>
-              <p className="type-caption mb-8 text-center">Certifications and compliance</p>
-            </Reveal>
+      <section
+        id="experience"
+        aria-label="Experience and education"
+        className="bg-transparent pb-16 md:pb-24 lg:pb-28 2xl:pb-32"
+      >
+        <div className="container-apple flex flex-col gap-14">
+          <Timeline title="Experience">
+            {experience.map((job, index) => (
+              <Reveal key={job.company} as="li" delay={index * 0.08} className="py-6">
+                <p className="text-[17px] font-semibold tracking-[-0.022em] text-primary">
+                  {job.company}
+                </p>
+                {job.roles.map((role) => (
+                  <TimelineRow key={role.title} label={role.title} dates={role.dates} />
+                ))}
+                {job.summary && <p className="type-body measure mt-3">{job.summary}</p>}
+              </Reveal>
+            ))}
+          </Timeline>
 
-            <ul className="card-apple-sm mx-auto max-w-[680px] divide-y divide-outline-variant px-6 md:px-10">
-              {certifications.map((cert, index) => (
-                <Reveal key={cert.name} as="li" delay={index * 0.08} className="py-6">
-                  <p className="text-[17px] font-semibold tracking-[-0.022em] text-primary">
-                    {cert.name}
-                  </p>
-
-                  <p className="type-caption mt-1 flex flex-wrap items-center gap-x-2 gap-y-1">
-                    <span>{cert.issuer}</span>
-                    <span>· {cert.year}</span>
-                  </p>
-
-                  {cert.detail && <p className="type-body measure mt-3">{cert.detail}</p>}
-                </Reveal>
-              ))}
-            </ul>
-          </div>
-        </section>
-      )}
+          <Timeline title="Education">
+            {education.map((item, index) => (
+              <Reveal key={item.school} as="li" delay={index * 0.08} className="py-6">
+                <p className="text-[17px] font-semibold tracking-[-0.022em] text-primary">
+                  {item.school}
+                </p>
+                <TimelineRow label={item.degree} dates={item.dates} />
+                {item.activity && <p className="type-body measure mt-3">{item.activity}</p>}
+              </Reveal>
+            ))}
+          </Timeline>
+        </div>
+      </section>
 
       {showStack && (
         <section
